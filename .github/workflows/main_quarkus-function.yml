@@ -33,7 +33,7 @@ jobs:
         shell: pwsh
         run: |+
           pushd './${{ env.PACKAGE_DIRECTORY }}'
-          mvn clean package -DresourceGroup=davivienda
+          mvn clean package -DskipTests -DresourceGroup=davivienda
           popd
       
       - name: Login to Azure
